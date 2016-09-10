@@ -1,0 +1,17 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/09/2015, 00:11:42
+    Author     : alexsandro
+*/
+
+/* latin */
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round'), local('/fonts/VarelaRound-Regular'), url(../fonts/APH4jr0uSos5wiut5cpjrhampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  }

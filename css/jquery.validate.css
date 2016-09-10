@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/11/2015, 01:41:38
+    Author     : alexsandro
+*/
+/**
+ * styling for tip content
+ * mostly for example
+ * note: canvas (the tip itself) cannot be styled here. use javascript options for that.
+ */
+.bt-content {
+  font-size: small;
+  color: #000;
+  line-height: normal;
+}
+
+/* styling for active target elements - usually for background hilighting */
+.bt-active {
+  /* example:
+  background-color: yellow !important;
+  */
+}
+
+
+ #errorContainer {
+                    display: none;
+                    
+                }
+
+                #errorContainer label {
+                    float: none;
+                    width: auto;
+                }
+
+                input.error {
+                    border: 1px solid #FF2323;
+                }
+                
+                
