@@ -5,44 +5,50 @@
 
 function tratandoCombobox(elementId) {
     var combobox = document.getElementById(elementId);
-        if(combobox.options[combobox.selectedIndex].value == "cidade") {
+        if(combobox.options[combobox.selectedIndex].value === "cidade") {
             combobox.remove(0);
-        }else if(combobox.options[combobox.selectedIndex].value == "estado"){
+        }else if(combobox.options[combobox.selectedIndex].value === "estado"){
             combobox.remove(0);
         }
 }
 
-
-
 function inseriCliente(){
     $(document).ready(function (){
        $('.button,.bg-success').click(function (event) {
-          var nome = $('#nome').val();
-          var cpf = $('#cpf').val();
-          var telefone = $('#telefone').val();
-          var celular = $('#celular').val();
-          var dataNascimento = $('#datanascimento').val();
-          var endereco = $('#endereco').val();
-          var complemento = $('#complemento').val();
-          var numero = $('#numero').val();
-          var cep = $('#cep').val();
-          var bairro = $('#bairro').val();
-          var cidade = $('#cidade').val();
-          var estado = $('#estado').val();
-          var email = $('#email').val();
-          var confirmaEmail = 0;
-          if ($('#marcacaoEmail') != ''){
-              confirmaEmail = 1;
-         }else{
-              confirmaEmail = 0;
-         }   
-          alert(celular);
-          $.post('/ze_conserto/ClienteServlet',
+           if($('#nome').val() === '' || $('#bairro').val() === '' || $('#cpf').val() === '' ||
+             $('#datanascimento').val() ==='' || $('#celular').val() === '' ||
+             $('#cep').val() === '' || $('#cidade').val() === '' || $('#complemento').val() === '' ||
+             $('#email').val() === '' || $('#endereco').val() === '' || $('#estado').val() === '' ||
+             $('#telefone').val() === '' || $('#numero').val() === '')
+            {
+                alert('entrou aqui 32');
+                //return false;
+            }else{
+                var nome = $('#nome').val();
+                var cpf = $('#cpf').val();
+                var telefone = $('#telefone').val();
+                var celular = $('#celular').val();
+                var dataNascimento = $('#datanascimento').val();
+                var endereco = $('#endereco').val();
+                var complemento = $('#complemento').val();
+                var numero = $('#numero').val();
+                var cep = $('#cep').val();
+                var bairro = $('#bairro').val();
+                var cidade = $('#cidade').val();
+                var estado = $('#estado').val();
+                var email = $('#email').val();
+                var confirmaEmail = 0;
+                if ($('#marcacaoEmail') !== ''){
+                    confirmaEmail = 1;
+               }else{
+                    confirmaEmail = 0;
+               }
+               $.post('/ze_conserto/ClienteServlet',
                 {nome:nome,
                  cpf:cpf,
                  telefone:telefone,
                  celular:celular,
-                 dataNascimento:dataNascimento,
+                 datanascimento:dataNascimento,
                  endereco:endereco,
                  complemento:complemento,
                  numero:numero,
@@ -52,9 +58,10 @@ function inseriCliente(){
                  estado:estado,
                  email:email,
                  confirmaEmail:confirmaEmail}
-                 ,function (){
-                       
+                 ,function (mensagem){
+                      alert(mensagem);
                  });
+            }    
        });
        return false;
     });

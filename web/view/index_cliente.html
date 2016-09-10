@@ -78,10 +78,10 @@
     <div class="box"><div class="close">X</div>
 
         <form id="cadastroCliente" method="post" action="" name="cadastro" class="form-horizontal">
-            <div class="row">
+            <div class="row1">
                 <legend>Dados Pessoais</legend>
 
-                <div class="row">
+                <div class="row1">
                     <div class="col-md-7" >
                         <div class=""><p><input required name="nome" id="nome" maxlength="60" type="text"
                                                     class="form-control" placeholder="Nome Completo"/></p>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row1">
                     <div class="col-md-4">
                         <div class=""><p><input  required type="text" name="telefone" id="telefone"
                                                  class="form-control" onkeypress="MascaraTelefone(this)"
@@ -186,23 +186,22 @@
                     </div>
                 </div>
 
-                <div class="well">
+                <div class="">
                     <input type="radio" name="marcacaoEmail" id="marcacaoEmail" value="macacao"> Deseja receber notificações sobre nossas ofertas?
                 </div>
 
                 <div class="row">
                     <div class="col-lg-4">
                         <button type="submit" id="btCadastro" onclick="inseriCliente()" name="btCadastro"  class="button bg-success">Cadastrar</button>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <button type="reset" id="btLimpar" name="btLimpar" class="button bg-success">Limpar</button>
-                    </div>
+                        
+                    </div> 
+                    <button type="reset" id="btLimpar" name="btLimpar" class="button bg-success">Limpar</button>
                 </div>
 
             </div>
 
         </form>
+       
 
     </div>
 

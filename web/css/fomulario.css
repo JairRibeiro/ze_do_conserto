@@ -13,11 +13,16 @@
     display:none;
 }
 
+.row1{
+    height: 20%;
+   
+}
+
 .box{
     position: absolute;
     top:20%;
     left:30%;
-    width:600px;
+    width:46%;
     height: 100%;
     background-color: #FFFFFF;
     z-index:101;

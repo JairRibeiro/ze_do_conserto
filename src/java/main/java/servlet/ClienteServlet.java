@@ -55,6 +55,7 @@ public class ClienteServlet extends HttpServlet {
         String email = request.getParameter("email");
         int is_mail = Integer.parseInt(request.getParameter("confirmaEmail"));
         
+        System.err.println(dataNascimento);
         
         Cliente cliente = new Cliente();
         cliente.setBairro(bairro);
@@ -74,6 +75,12 @@ public class ClienteServlet extends HttpServlet {
         
         ClienteController clienteController = new ClienteController();
         clienteController.inserirCliente(cliente);
+
+        String sucess = "Informações salvas com sucesso!";
+        response.setContentType("text/plain");  
+        response.setCharacterEncoding("UTF-8");
+        System.err.println(sucess);
+        response.getWriter().write(sucess);
         
     }
     

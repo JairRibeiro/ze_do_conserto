@@ -28,7 +28,7 @@ public class ClienteDao implements ClienteInterfaceDao{
        
         Connection conectar = conexao.conectar();
         
-        String SQL = "INSERT INTO cliente (nome,cpf,telefone,celular,datanasccimento,"
+        String SQL = "INSERT INTO cliente (nome,cpf,telefone,celular,datanascimento,"
                                            +"endereco,complemento,numero,cep,bairro,cidade,estado,"
                                            +"email,is_email) VALUES"
                                            + " (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -57,6 +57,7 @@ public class ClienteDao implements ClienteInterfaceDao{
             pstm.close();
        
         }catch(SQLException e){
+            System.out.append(e.getMessage());
           throw new RuntimeException(e);  
         }finally{
              
