@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Zé do Conserto</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+    <!--BOOTSTRAP-->
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--<link herf="../css/bootstrap-datepicker3.css" type="text/css" media="all"/>-->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700" rel="stylesheet" />
+
+<!--<link href="css/default.css" rel="stylesheet" type="text/css" media="all" />-->
+<link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/fomulario.css" rel="stylesheet" type="text/css" media="all"/>
+
+    
+ <script language="JavaScript" src="../js/jquery-3.1.0.min.js"></script>
+<script language="JavaScript" src="../js/jquery-1.11.1.min.js"></script>
+<script language="JavaScript">
+    $(document).ready(function(){
+        $('.button, .button-small').click(function(){
+            $('.background, .box').animate({'opacity':'.60'},500,'linear');
+            $('.box').animate({'opacity':'1.00'},500,'linear');
+            $('.background, .box').css('display','block');
+        });
+
+        $('.close').click(function () {
+            $('.background,.box').animate({'opacity':'0'},500,'linear',function () {
+                $('.background, .box').css('display','none');
+            });
+        });
+
+        $('.background').click(function () {
+            $('.background,.box').animate({'opacity':'0'},500,'linear',function () {
+                $('.background, .box').css('display','none');
+            });
+        });
+
+    });
+</script>
+<script language="JavaScript" src="../js/formulario.js"></script>
+<script language="JavaScript" src="../js/MascaraValidacao.js"></script>
+
+
+
+<!--<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />-->
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1>Zé do Conserto</h1>
+			<div id="menu">
+				<ul>
+					<li class="current_page_item"><a href="/ze_conserto/index.html" accesskey="1" title="">Pagina Incial</a></li>
+					<li><a href="../view/index_cliente.html" accesskey="2" title="">Clientes</a></li>
+					<li><a href="#" accesskey="3" title="">Sobre nós</a></li>
+					<li><a href="#" accesskey="4" title="">Funcionários</a></li>
+					<li><a href="#" accesskey="5" title="">Contato</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="page-wrapper">
+
+
+</div>
+<div id="wrapper">
+    <h2>Conteúdo da Pagina</h2>
+    <a href="#" class="button button-small">Cadastro</a>
+    <div class="background"> texto</div>
+    <div class="box"><div class="close">X</div>
+
+        <form id="cadastroCliente" method="post" action="" name="cadastro" class="form-horizontal">
+            <div class="row">
+                <legend>Dados Pessoais</legend>
+
+                <div class="row">
+                    <div class="col-md-7" >
+                        <div class=""><p><input required name="nome" id="nome" maxlength="60" type="text"
+                                                    class="form-control" placeholder="Nome Completo"/></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class=""><p><input required  type="text" name="cpf" id="cpf" maxlength="14"
+                                                class="form-control" onkeypress="MascaraCPF(this)"
+                                                    placeholder="CPF"/></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class=""><p><input  required type="text" name="telefone" id="telefone"
+                                                 class="form-control" onkeypress="MascaraTelefone(this)"
+                                                    maxlength="14" placeholder="Telefone"/></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class=""><p><input type="text" name="celular" id="celular"
+                                                    class="form-control" onkeypress="MascaraCelular(this)"
+                                                    maxlength="15" placeholder="Celular"/></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class=""><p><input required type="text" name="datanascimento" id="datanascimento" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$"
+                                                    maxlength="10" class="form-control" onkeypress="MascaraData(this)"
+                                                    placeholder="Nascimento"/></p>
+                        </div>
+                    </div>
+                </div>
+
+                <legend>Endereço Residêncial</legend>
+
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class=""><p><input required class="form-control" type="text" name="endereco" id="endereco" maxlength="60"
+                                   placeholder="Endereço"/></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class=""><p><input class="form-control" type="text" name="complemento" id="complemento"
+                                        maxlength="30" placeholder="Complemento"/></p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class=""><p><input required class="form-control" type="text" name="numero" id="numero"
+                                        maxlength="5" placeholder="Nº"/></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class=""><p><input required class="form-control" name="cep" id="cep"
+                                                placeholder="CEP" maxlength="10" type="text" onkeypress="MascaraCep(this)"/></p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class=""><p><input required class="form-control" name="bairro" id="bairro"
+                                                placeholder="Bairro" maxlength="50" type="text"/></p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class=""><p><input required class="form-control" name="cidade" id="cidade"
+                                                placeholder="Cidade" maxlength="20" type="text"/></p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class=""><p><input required class="form-control" name="estado" id="estado"
+                                                placeholder="Estado" maxlength="20" type="text"/></p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <legend>Outra forma de contato</legend>
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class=""><p><input required class="form-control" name="email" id="email"
+                                           placeholder="Email" maxlength="60" type="email"> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="well">
+                    <input type="radio" name="marcacaoEmail" id="marcacaoEmail" value="macacao"> Deseja receber notificações sobre nossas ofertas?
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <button type="submit" id="btCadastro" onclick="inseriCliente()" name="btCadastro"  class="button bg-success">Cadastrar</button>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <button type="reset" id="btLimpar" name="btLimpar" class="button bg-success">Limpar</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+</div>
+<div id="copyright" class="container">
+	<p style="color:#FFFFFF" >Zé do Conserto. Todos os direitos reservados</p>
+		<ul class="contact">
+			<li><a href="https://twitter.com/" class="icon icon-twitter"><span>Twitter</span></a></li>
+			<li><a href="http://facebook.com.br" class="icon icon-facebook"><span></span></a></li>
+			<!--<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>-->
+			<li><a href="https://www.tumblr.com/" class="icon icon-tumblr"><span>Google+</span></a></li>
+			<!--<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>-->
+		</ul>
+</div>
+</body>
+</html>
